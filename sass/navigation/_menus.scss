@@ -1,6 +1,11 @@
 header#masthead {
 	display: flex;
   justify-content: space-around;
+  .site-branding {
+  	img {
+  		max-width: 200px;
+  	}
+  }
 }
 .main-navigation {
 	clear: both;
@@ -10,7 +15,7 @@ header#masthead {
   width: 600px;
   float: right;
 	align-items: center;
-	
+
 	ul {
 		display: none;
 		list-style: none;
