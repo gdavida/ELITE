@@ -1,11 +1,7 @@
 header#masthead {
 	display: flex;
   justify-content: space-around;
-  .site-branding {
-  	img {
-  		max-width: 200px;
-  	}
-  }
+  margin: 20px 0;
 }
 .main-navigation {
 	clear: both;
