@@ -28,10 +28,32 @@ footer {
 
 .flex {
 	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 // Page specific
 // Front page
+//latest-clients
 .each-latest-client {
 	width: 33%;
+}
+//why-elite
+.each-why-elite {
+	justify-content: space-around;
+	margin: 40px auto;
+	&:nth-child(odd) {
+		flex-direction: row-reverse;
+		margin: 80px auto;
+	}
+	img {
+		max-width: 450px;
+	}
+	.text-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		max-width: 600px;
+		align-items: flex-start;
+	}
 }
