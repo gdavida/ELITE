@@ -3,6 +3,7 @@
 	display: flex;
   justify-content: center;
 	flex-wrap: wrap;
+	margin: 40px auto;
 
   .container {
   	width: 960px;
@@ -13,8 +14,22 @@
   		width: 95%;
   	}
 	}
+}
 
- }
+	  .inside-container {
+	  	width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+	  	@media screen and (max-width: 991px) {
+	  		width: 90%;
+	  	}
+	  	@media screen and (max-width: 767px) {
+	  		width: 95%;
+	  	}
+		}
+
+
+
 
 div#page {
   min-height: calc(92vh - 70px);
@@ -30,6 +45,10 @@ footer {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: space-between;
+	&.h1-row {
+		justify-content: flex-start;
+	}
 }
 
 // Page specific
@@ -40,7 +59,7 @@ footer {
 }
 //why-elite
 .each-why-elite {
-	justify-content: space-around;
+	justify-content: space-between;
 	margin: 40px auto;
 	&:nth-child(odd) {
 		flex-direction: row-reverse;
@@ -55,5 +74,11 @@ footer {
 		padding: 20px;
 		max-width: 600px;
 		align-items: flex-start;
+	}
+}
+//instagram-feed
+.instagram-feed {
+	img {
+		max-width: 200px;
 	}
 }
