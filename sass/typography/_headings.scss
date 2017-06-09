@@ -30,3 +30,10 @@ h3, .h3 {
 		color: $support-white;
 	}
 }
+
+ .main-navigation a {
+ 		font-family: 'Open Sans', sans-serif;
+ 	  font-weight: 700;
+ 	  font-size: 18px;
+ 		color: $support-gray !important;
+ }

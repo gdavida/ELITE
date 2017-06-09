@@ -29,3 +29,23 @@ $support-white: #E8E1E1;
 $support-orange: #FF7300;
 $white: #000000;
 $black: #ffffff;
+
+
+.white-text {
+  color: white;
+}
+
+.primary-red-bg {
+  background-color: $primary-red;
+  h1, h2, h3, p {
+    color: white !important;
+  }
+}
+
+.support-red-bg {
+  background-color: $support-red;
+}
+
+.white-bg {
+  background-color: white;
+}

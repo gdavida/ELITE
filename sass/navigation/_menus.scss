@@ -1,16 +1,33 @@
 header#masthead {
 	display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+	padding: 0 0 5px 0;
+	background-color: $support-white;
+	.site-branding {
+		width: 45%;
+		display: flex;
+		justify-content: center;
+		margin: 0 0 0 -20px;
+		-webkit-transform: skew(20deg);
+	 	-moz-transform: skew(20deg);
+		-o-transform: skew(20deg);
+		padding-bottom: 40px;
+		img {
+			-webkit-transform: skew(-20deg);
+		 	-moz-transform: skew(-20deg);
+			-o-transform: skew(-20deg);
+		}
+	}
 }
 .main-navigation {
 	clear: both;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 600px;
+  width: 55%;
   float: right;
 	align-items: center;
+	padding-bottom: 40px;
 
 	ul {
 		display: none;

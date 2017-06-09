@@ -1,22 +1,45 @@
+a.btn,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	color: white !important;
 	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
-
+	border-color: $support-red;
+	background-color: $support-red;
+	padding: 10px 30px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
 	&:hover {
-		border-color: $color__border-button-hover;
+		border-color: $primary-red;
+		background-color: $primary-red;
 	}
 
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+		border-color: $primary-red;
+		background-color: $primary-red;
+	}
+}
+
+a.gray-btn,
+#menu-item-37 {
+	background-color: $support-gray;
+	 a{
+		border: 1px solid;
+		border-color: $support-gray;
+		background-color: $support-gray;
+		color: white !important;
+
+		&:hover {
+		border-color: $support-gray;
+		background-color: darken($support-gray, .2);
+		}
+		&:active,
+		&:focus {
+			border-color: $support-gray;
+			background-color: darken($support-gray, .2);
+		}
 	}
 }
