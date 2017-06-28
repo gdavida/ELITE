@@ -45,7 +45,10 @@ function elite_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'elite' ),
+		'menu-2' => esc_html__( 'Footer', 'elite' ),
 	) );
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -141,3 +144,149 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * add page slug to body class, if on a page
+ */
+add_filter('body_class','smartestb_pages_bodyclass');
+function smartestb_pages_bodyclass($classes) {
+    if (is_page()) {
+        // get page slug
+        global $post;
+        $slug = get_post( $post )->post_name;
+
+        // add slug to $classes array
+        $classes[] = $slug;
+        // return the $classes array
+        return $classes;
+    } else {
+        return $classes;
+    }
+}
+
+
+
+// Register Custom Post Type
+function featured_clients() {
+
+	$labels = array(
+		'name'                  => _x( 'Athletes', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Athlete', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Athletes', 'text_domain' ),
+		'name_admin_bar'        => __( 'Athletes', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+		'all_items'             => __( 'All Items', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+		'update_item'           => __( 'Update Item', 'text_domain' ),
+		'view_item'             => __( 'View Item', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search Item', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Athlete', 'text_domain' ),
+		'description'           => __( 'Each client feature message', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'custom-fields', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-awards',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => false,
+	);
+	register_post_type( 'featured_client', $args );
+
+}
+add_action( 'init', 'featured_clients', 0 );
+
+// Register Custom Post Type
+function our_staff() {
+
+	$labels = array(
+		'name'                  => _x( 'Our Staffs', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Our Staff', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Our Staff', 'text_domain' ),
+		'name_admin_bar'        => __( 'Our Staff', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+		'all_items'             => __( 'All Items', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+		'update_item'           => __( 'Update Item', 'text_domain' ),
+		'view_item'             => __( 'View Item', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search Item', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$capabilities = array(
+		'edit_post'             => 'edit_post',
+		'read_post'             => 'read_post',
+		'delete_post'           => 'delete_post',
+		'edit_posts'            => 'edit_posts',
+		'edit_others_posts'     => 'edit_others_posts',
+		'publish_posts'         => 'dashicons-id',
+		'read_private_posts'    => 'read_private_posts',
+	);
+	$args = array(
+		'label'                 => __( 'Our Staff', 'text_domain' ),
+		'description'           => __( 'Post Type Description', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'custom-fields', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-id',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => false,
+	);
+	register_post_type( 'our_staff', $args );
+
+}
+add_action( 'init', 'our_staff', 0 );

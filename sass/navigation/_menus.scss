@@ -6,12 +6,12 @@ header#masthead {
 	.site-branding {
 		width: 45%;
 		display: flex;
-		justify-content: center;
 		margin: 0 0 0 -20px;
+		padding-left: 9%;
 		-webkit-transform: skew(20deg);
 	 	-moz-transform: skew(20deg);
 		-o-transform: skew(20deg);
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 		img {
 			-webkit-transform: skew(-20deg);
 		 	-moz-transform: skew(-20deg);
@@ -27,7 +27,7 @@ header#masthead {
   width: 55%;
   float: right;
 	align-items: center;
-	padding-bottom: 40px;
+	padding-bottom: 10px;
 
 	ul {
 		display: none;
@@ -36,10 +36,10 @@ header#masthead {
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: white;
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 40px;
 			left: -999em;
 			z-index: 99999;
 
