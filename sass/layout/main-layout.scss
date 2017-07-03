@@ -406,10 +406,20 @@ section.twitter {
 // community page
 	.each-community {
 		margin-bottom: 60px;
+		.text-wrapper {
+	    position: relative;
+	    top: -50px;
+		}
 		h2 {
 			text-align: left;
 			margin: 0;
+			background-color: $support-white;
+	    padding: 10px;
+			clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 85% 0%);
 		}
+		p {
+		}
+
 		.inside-container {
 			margin-left: 7%;
 		}
@@ -423,54 +433,113 @@ section.twitter {
 
 .our-staff {
 	margin-left: 7%;
+	margin-right: 7%;
 	.row {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		.left-column,
+		.right-column {
+			width: 50%;
+		}
 	}
 	.each-our-staff {
 		display: flex;
 		flex-direction: column;
-		width: 400px;
-		max-height: 400px;
-		&:nth-child(4) {
-			margin-left: 50px;
-		}
+		// width: 55%;
 		img {
 			width: 100%;
 			filter:grayscale(100%);
 		}
 		.text-wrapper {
-			position: relative;
-			top: -120px;
-			padding: 5px 0 5px 20px;
-			width: 80%;
-			background-color: black;
-			visibility: hidden;
-			clip-path: polygon(0% 10%, 0% 85%, 100% 85%, 93% 21%);
-			h3 {
-				margin-bottom: 0;
-				color: $primary-gray;
-			}
-			p {
-				margin-top: 0;
-				color: $primary-gray;
-			}
+			padding: 30px 0 30px 20px;
+			clip-path: polygon(0% 10%, 0% 85%, 79% 85%, 94% 10%);
+			background-color: $support-gray;
+			display: flex;
+	    flex-direction: row-reverse;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding-right: 30px;
 		}
-	}
+				h3 {
+					color: white;
+					margin-right: 90px;
+				}
+				i {
+					color: white;
+				}
+		}
+
+		.bio-wrapper {
+		display: none;
+		background-color: white;
+		p {
+			margin: 0 50px 0 40px;
+			max-width: 440px;
+		}
+		}
 }
 
-.each-our-staff {
-	a:hover {
-		img {
-			filter:none;
-		}
-		.text-wrapper {
-			visibility:visible;
+.our-staff {
 
-		}
-	}
+					.format6,
+									.format8,
+				.format10 {
+					// width: 45%;
+						.text-wrapper {
+						flex-direction: row;
+						padding-left: 90px;
+						clip-path: polygon(15% 10%, 0% 86%, 100% 86%, 100% 10%);
+						background-color: $primary-gray;
+						h3 {
+							margin-left: 40px;
+						}
+				}
+					i {
+						color: $support-red !important;
+					}
+				}
+				.format2,
+				.format4 {
+					// width: 45% !important;
+					margin-left: 5%;
+					.text-wrapper {
+						background-color: $support-white !important;
+						height: 240px;
+						clip-path: polygon(0% 20%, 0% 85%, 100% 85%, 85% 22%);
+					}
+				}
+				.format7,
+				.format9 {
+					// width: 45%;
+					position: relative;
+			    right: 50px;
+			    top: 20px;
+						.text-wrapper {
+						clip-path: polygon(1% 10%, 11% 85%, 100% 85%, 100% 10%);
+						padding-left: 90px;
+						}
+				}
+				.format6 {
+					left:-90px;
+					position: relative;
+					margin-top: 40px;
+				}
+				.format8 {
+					position: relative;
+					left: -110px;
+					top: 100px;
+				}
+				#bioWrapper7 {
+					position: relative;
+					left: 100px;
+				}
+				#bioWrapper8 {
+					position: relative;
+					left: 130px;
+				}
 }
+
 
 // partnerships and brands
 

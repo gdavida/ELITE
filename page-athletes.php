@@ -9,7 +9,7 @@
  get_header(); ?>
 
 
- <div class="section our-staff">
+ <div class="section athletes">
  	<div class="row">
  		<?php
  			$featured_client_i = 1;

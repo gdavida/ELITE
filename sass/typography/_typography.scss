@@ -15,3 +15,8 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+a {
+	color: inherit !important;
+	text-decoration: none !important;
+}
