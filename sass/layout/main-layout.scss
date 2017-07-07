@@ -101,15 +101,15 @@ footer {
 	}
 }
 .home.hero {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 40px 0 0;
-	position: relative;
-	top: -45px;
+	display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0 60px 0;
+  position: relative;
+  top: -45px;
+	background-color: black;
+  height: 560px;
 	.text-wrapper {
-		width: 40%;
-		background-color: black;
 		font-family: 'Railway', sans-serif;
 		height: 480px;
 		display: flex;
@@ -119,8 +119,8 @@ footer {
 		z-index: 10;
 		padding-left: 7%;
 		p.feature {
-			font-size: 100px;
-			line-height: 110px;
+			font-size: 110px;
+			line-height: 120px;
 			font-weight: 100;
 			margin: 10px 0;
 			span {
@@ -134,21 +134,29 @@ footer {
 		}
 	}
 	.image-wrapper {
-		width: 60%;
-		background-image: url('/wp-content/themes/elite/images/test-header.jpg');
-		background-repeat: no-repeat;
-		background-position: right;
-		height:550px;
-		position: relative;
-		top: -20px;
+		// width: 60%;
+		// background-image: url('/wp-content/themes/elite/images/test-header.jpg');
+		// background-repeat: no-repeat;
+		// background-position: right;
+		// height:550px;
+		// position: relative;
+		// top: -20px;
 		// -webkit-transform: skew(4deg);
 		// -moz-transform: skew(4deg);
 		// -o-transform: skew(4deg);
-		img {
-			// -webkit-transform: skew(-4deg);
-			// -moz-transform: skew(-4deg);
-			// -o-transform: skew(-4deg);
-		}
+	}
+	img {
+		width: auto;
+		height: 600px;
+		position: relative;
+		top: -20px;
+		clip-path: polygon(0% 0%, 17% 100%, 100% 100%, 100% 0%);
+		left: -50px;
+		z-index: 8;
+		background:linear-gradient(70deg,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.0)
+    );
 	}
 }
 .home-hero-angled-piece {
@@ -273,7 +281,7 @@ section.instagram {
 //twitter-feed
 section.twitter {
 	position: relative;
-	top: -90px;
+	top: -70px;
 	.flex.inside-container {
 		width: 90%;
 		margin-left: auto;
@@ -309,11 +317,11 @@ section.twitter {
 	-webkit-transform: skew(-8deg);
 	-moz-transform: skew(-8deg);
 	-o-transform: skew(-8deg);
-	height: 280px;
-  position: relative;
-  right: 50px;
-  display: flex;
-  padding-top: 40px;
+	height: 310px;
+	position: relative;
+	right: 50px;
+	display: flex;
+	padding-top: 50px;
 	iframe {
 		-webkit-transform: skew(8deg);
 		-moz-transform: skew(8deg);

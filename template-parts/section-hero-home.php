@@ -23,8 +23,7 @@
 			Contact Us
 		</a>
 	</div>
-	<div class="image-wrapper">
-	</div>
+	<img src="<?php the_field ('hero_image'); ?>">
 </section>
 
 <div class="home-hero-angled-piece support-red-bg">

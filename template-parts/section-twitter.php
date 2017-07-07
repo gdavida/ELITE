@@ -14,10 +14,18 @@
 	</div>
 	<div class="row twitter-feed  primary-gray-bg">
 		<div class="flex inside-container">
-			<!-- LightWidget WIDGET -->
-			<!-- https://lightwidget.com/?username=gdavida -->
-			<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/28b44f31f380572ba8b09e3cf5e1efcb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+			<?php
+			while ( have_posts() ) : the_post();
 
+				get_template_part( 'template-parts/content', 'page' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; // End of the loop.
+			?>
 		</div><!-- /.twitter-feed -->
 	</div><!-- /.page-content -->
 </section><!-- /.home.hero -->
