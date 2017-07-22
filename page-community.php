@@ -17,7 +17,7 @@
 
 		<div class="each-community" style="">
     <div class="image-wrapper">
-      <img style="max-width:900px; max-height:300px;" class="" src="<?php echo get_sub_field('org_photo') ?>">
+      <img style="" class="" src="<?php echo get_sub_field('org_photo') ?>">
     </div>
       <div class="text-wrapper">
   			<h2>

@@ -16,6 +16,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
+<?php get_template_part( 'template-parts/section', 'featured-video' ); ?>
 <?php get_template_part( 'template-parts/section', 'latest-clients' ); ?>
 <?php get_template_part( 'template-parts/section', 'why-elite' ); ?>
 <?php get_template_part( 'template-parts/section', 'instagram' ); ?>

@@ -21,6 +21,9 @@ img#logo {
     background-color: white;
     padding-top: 20px;
     padding-bottom: 10px;
+		@media screen and (max-width: 430px) {
+			max-width: 150px;
+		}
 }
 
 

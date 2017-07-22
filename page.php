@@ -15,6 +15,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area container-wrapper">
+		<?php if ( has_post_thumbnail() ) : ?>
+        <?php the_post_thumbnail(); ?>
+		<?php endif; ?>
 		<main id="main" class="site-main container inside-container" role="main">
 
 			<?php

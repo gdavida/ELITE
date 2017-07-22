@@ -19,7 +19,7 @@
 		<div class="contact-info">
 			<div class="text-wrapper">
 				<h2>Contact Us</h2>
-				<p><strong>Scottsdale Office</strong><br>
+				<p><strong>Chandler Office</strong><br>
 					2390 W. Ray Road<br>
 					Suite 3<br>
 					Chandler, AZ 85224

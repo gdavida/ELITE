@@ -11,7 +11,7 @@
 <section class="latest-clients featured-clients">
 	<div class="row h1-row flex">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/ui/h1-triangle.png" alt="">
-			<h1 class="">The Latest Elite Clients</h1>
+			<h1 class="">The Latest With Elite Clients</h1>
 	</div>
 	<div class="row">
 		<div class="contents container">
@@ -24,18 +24,18 @@
 	    while ( have_rows('homepage_featured_clients') ) : the_row(); ?>
 
 			<div class="each-featured-client">
-			<a href="#">
+			<!-- <a href="#"> -->
 					<?php // vars
 					$image = get_sub_field('featured_image');
 					$title = get_sub_field('featured_title');
 					$subtitle = get_sub_field('featured_subtitle');
 	        // display a sub field value ?>
-					<img class="" src="<?php echo $image; ?>"
-			</a>
-		<div class="text-wrapper">
+					<img class="" src="<?php echo $image; ?>">
+			<!-- </a> -->
+		<!-- <div class="text-wrapper">
 			<h3><?php echo $title ?></h3>
 			<p><?php echo $subtitle ?></p>
-		</div>
+		</div> -->
 	</div>
 		<?php
 			endwhile;

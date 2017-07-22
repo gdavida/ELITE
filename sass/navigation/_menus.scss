@@ -3,6 +3,9 @@ header#masthead {
   justify-content: space-around;
 	padding: 0 0 5px 0;
 	background-color: $support-white;
+	@media screen and (max-width: 830px) {
+		flex-direction: column;
+	}
 	.site-branding {
 		width: 45%;
 		display: flex;
@@ -12,10 +15,26 @@ header#masthead {
 	 	-moz-transform: skew(20deg);
 		-o-transform: skew(20deg);
 		padding-bottom: 20px;
+		@media screen and (max-width: 991px) {
+			width: 35%;
+			margin: 0 0 0 -30px;
+			padding-left: 5%;
+		}
+		@media screen and (max-width: 830px) {
+			width: 60%;
+			margin-left: -50px;
+		}
+		@media screen and (max-width: 600px) {
+			width: 100%;
+		}
 		img {
 			-webkit-transform: skew(-20deg);
 		 	-moz-transform: skew(-20deg);
 			-o-transform: skew(-20deg);
+			@media screen and (max-width: 830px) {
+				margin-left: 70px;
+				background-color: transparent;
+			}
 		}
 	}
 }
@@ -28,13 +47,28 @@ header#masthead {
   float: right;
 	align-items: center;
 	padding-bottom: 10px;
+	@media screen and (max-width: 991px) {
+		width: 65%;
+	}
+	@media screen and (max-width: 830px) {
+		width: 100%;
+		padding: 0px 0 20px;
+	}
+
+
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 
+
+		@media screen and (max-width: 600px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		ul {
 			background-color: white;
 			float: left;
@@ -79,7 +113,18 @@ header#masthead {
 		position: relative;
 		margin: 10px;
     padding: 10px 20px;
-
+		@media screen and (max-width: 830px) {
+			margin: 5px;
+			padding: 10px 40px 0px;
+		}
+		@media screen and (max-width: 670px) {
+			margin: 5px;
+			padding: 10px 20px 0px;
+		}
+		@media screen and (max-width: 590px) {
+			margin: 5px;
+			padding: 10px 10px 0px;
+		}
 		&:hover > a,
 		&.focus > a {
 		}
@@ -98,9 +143,8 @@ header#masthead {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {

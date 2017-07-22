@@ -11,33 +11,30 @@
 
  <div class="section athletes">
  	<div class="row">
- 		<?php
- 			$featured_client_i = 1;
- 			$featured_client_args = array(
- 			'post_type' => 'featured_client',
- 			'posts_per_page' => -1,
- 			'order' => 'DESC',
- 			);
- 			$featured_client_query = new WP_Query($featured_client_args);
- 			if ( $featured_client_query->have_posts() ) :
- 			while ( $featured_client_query->have_posts() ) : $featured_client_query->the_post();
- 		?>
+    <?php if( have_rows('athletes') ):
+      ?>
+      <?php			 	// loop through the rows of data
+
+    while ( have_rows('athletes') ) : the_row(); ?>
 
  		<div class="each-athlete">
  			<a href="#">
- 				<img class="" src="<?php the_field('athlete_image'); ?>"
+ 				<img class="" src="<?php echo get_sub_field('image'); ?>"
 			</a>
  			<div class="text-wrapper">
- 				<h3><?php the_field('athlete_name'); ?></h3>
- 				<p><?php the_field('subtitle_1'); ?> - <?php the_field('subtitle_2'); ?></p>
+ 				<h3><?php echo get_sub_field('first_name'); ?> <?php echo get_sub_field('last_name'); ?></h3>
+ 				<p><?php echo get_sub_field('team'); ?> - <?php echo get_sub_field('position'); ?></p>
  			</div>
 
  		</a>
  		</div>
 
- 		<?php
- 		endwhile;
- 		endif; wp_reset_postdata(); ?>
+            <?php
+              endwhile;
+              else :
+                // no rows found
+              endif; ?>
+
  	</div>
  </div>
 <?php
