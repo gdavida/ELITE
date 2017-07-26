@@ -19,12 +19,12 @@
 		<div class="contact-info">
 			<div class="text-wrapper">
 				<h2>Contact Us</h2>
-				<p><strong>Chandler Office</strong><br>
+				<p><strong>Arizona Office</strong><br>
 					2390 W. Ray Road<br>
 					Suite 3<br>
 					Chandler, AZ 85224
 				</p>
-				<p><strong>Nashville Office</strong><br>
+				<p><strong>Tennessee Office</strong><br>
 					1720 West End Ave<br>
 					Suite #330<br>
 					Nashville, TN 37203
